@@ -1,0 +1,22 @@
+
+/*
+    ERROR message
+ */
+
+p.error {
+    padding: 1rem;
+    background-color: pink;
+}
+
+header {
+    background-color: lightgray;;
+    padding: 0.5rem;
+}
+
+
+header section {
+    text-align: right;
+}
+.form{
+    padding-left: 1000px;
+}

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title></title>
+        <style>
+            @import '/css/nav.css';
+            @import '/css/style.css';
+            body {
+
+            }
+        </style>
+    </head>
+
+<body>
+
+<header>
+
+    <form class="form"
+            action="index.php"
+            method="post"
+    >
+        <input type="hidden" name="action" value="processLogin">
+
+        <p>
+            username:
+            <input type="text" name="username">
+        </p>
+        <p>
+            password:
+            <input type="text" name="password">
+        </p>
+
+        <input type="submit" value="login">
+
+    </form>
+</header>
+
+    <section>
+        {% if isLoggedIn %}
+            you are logged in as: <strong>{{ username }}</strong>
+
+            {% if userRole is defined %}
+                (role = {{ userRole }})
+            {% endif %}
+            <br>
+            <a href="/index.php?action=logout">logout</a>
+        {% else %}
+            <a href="/index.php?action=login">login</a>
+        {% endif %}
+
+
+    </section>
+
+
+    <nav>
+        <ul>
+            <li><a href="/" class="button">home</a></li>
+            <li><a href="/index.php?action=about" class="button">about</a>
+            <li><a href="/index.php?action=characters" class="button">Characters</a></li>
+        </ul>
+    </nav>
+
+    {% if isLoggedIn %}
+
+    <nav>
+        <ul>
+            <li><a href="/index.php?action=adminHome">admin home</a></li>
+        </ul>
+    </nav>
+    {% endif %}
+
+
+
+</header>
+
+
+
+{% block main %}
+{% endblock %}
+
+<footer>
+    Web Deb Project
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+nav ul {
+    display: flex;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    flex: 1;
+}
+
+nav a {
+    display: block;
+
+    border: 0.5rem solid lime;
+    padding: 0.2rem;
+
+    background: white;
+    text-align: center;
+
+    color: black;
+    text-decoration:none;
+}
+
+
+nav
+{
+    padding: 20px;
+    text-align: center;
+    background-color: #E62117;
+}
+
+nav .button
+{
+
+    width: 100px;
+    padding: 20px 40px;
+    color: #ffffff;
+    background-color: #E62117;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    text-decoration:none;
+}
+
+nav a.button:hover
+{
+    background-color : lightgrey;
+
+}
